@@ -25,7 +25,26 @@ generate.addEventListener("click", () => {
    password.innerText = generatePassword(checkLower, checkUpper, checkNumber, checkSpecial, length)
  
 })
+
+ //Functions create random numbers/characters
  
+function generateSpecial() {
+  const symbols = "#$%*.?&";
+  return symbols [Math.floor(Math.random() * symbols.length)]; 
+}
+ 
+function generateNumber() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+ 
+function generateLower() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+ 
+function generateUpper() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
 //Sets the slide bar and character range to display the same value
 function syncCharacterAmount(e) {
   const value = e.target.value
@@ -61,21 +80,4 @@ function generatePassword(lower, upper, number, special, characterRange){
 return generatedPass
 
 }
-//Functions create random numbers/characters
- 
-function generateSpecial() {
-  const symbols = "#$%*.?&";
-  return symbols [Math.floor(Math.random() * symbols.length)]; 
-}
- 
-function generateNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
- 
-function generateLower() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
- 
-function generateUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
+
