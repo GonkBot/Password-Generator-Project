@@ -65,7 +65,7 @@ function generatePassword(lower, upper, number, special, characterRange){
  
   console.log("labelChecks", labelChecks);
  
-  if(countChecks === 0) {
+  if(countChecks == 0) {
     return "Must have at least one field marked";
   }
 
